@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+#game-container {
+  width: 840px;
+  height: 840px;
+  position: relative;
+  background-color: #000;
+}
+
+.pacman {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  z-index: 1;
+  transition: transform 0.2s;
+}
+
+.pacman.open {
+  transform: rotate(45deg);
+}
+
+.wall {
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+}
+
+.food {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.obstacle {
+  width: 4px;
+  height: 26px;
+  background-color: blue;
+  position: absolute;
+  z-index: 3;
+}

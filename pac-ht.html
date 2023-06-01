@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pac-Man Oyunu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+    }
+
+    #game-container {
+      width: 600px;
+      height: 600px;
+      position: relative;
+      background-color: #000;
+    }
+
+    .pacman {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: yellow;
+      position: absolute;
+      z-index: 1;
+      transition: transform 0.2s;
+    }
+
+    .pacman.open {
+      transform: rotate(45deg);
+    }
+
+    .wall {
+      width: 30px;
+      height: 30px;
+      background-color: blue;
+      position: absolute;
+    }
+
+    .food {
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .obstacle {
+      width: 4px;
+      height: 26px;
+      background-color: blue;
+      position: absolute;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <div class="pacman" id="pacman"></div>
+
+    <div class="wall" style="left: 60px; top: 60px;"></div>
+    <div class="wall" style="left: 90px; top: 60px;"></div>
+    <div class="wall" style="left: 120px; top: 60px;"></div>
+
+    <!-- Diğer duvarları burada oluşturabilirsiniz -->
+
+    <div class="food" style="left: 60px; top: 30px;"></div>
+    <div class="food" style="left: 90px; top: 30px;"></div>
+    <div class="food" style="left: 120px; top: 30px;"></div>
+    <div class="food" style="left: 150px; top: 30px;"></div>
+    <!-- Diğer yemleri burada oluşturabilirsiniz -->
+
+    <div class="obstacle" style="left: 210px; top: 60px;"></div>
+    <div class="obstacle" style="left: 240px; top: 60px;"></div>
+    <!-- Diğer engelleri burada oluşturabilirsiniz -->
+  </div>
+
+  <script src="pac-js.js"></script>
+</body>
+</html>
